@@ -1,0 +1,21 @@
+
+
+  .ticker-text {
+    position: absolute;
+    white-space: nowrap; /* Ensure text stays in a single line */
+    left: 100%; /* Start from the right side of the button */
+    transition: none; /* No transition when not hovered */
+  }
+
+  .ticker-button:hover .ticker-text {
+    animation: ticker-move 10s linear infinite; /* Continuous linear movement */
+  }
+
+  @keyframes ticker-move {
+    from {
+      left: 100%; /* Start from the far right */
+    }
+    to {
+      left: -100%; /* End at the far left */
+    }
+  }
