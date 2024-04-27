@@ -22,8 +22,8 @@ export default function GeneralInfo({ setIsOpen }) {
                     </p>
                 </div>
                 <div className="pb-8 flex justify-end">
-                    <button className="btn-two px-8 md:px-12 py-4 font-bold uppercase bg-transparent border border-white text-white hover:bg-white hover:text-black transition-colors duration-300">
-                        Contact Me
+                    <button className="btn-two font-orbitron px-8 md:px-12 py-4 font-bold uppercase bg-transparent border border-white text-white hover:bg-white hover:text-black transition-colors duration-300">
+                        <span>Contact Me</span>
                     </button>
                 </div>
             </div>

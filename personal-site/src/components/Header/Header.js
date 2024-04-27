@@ -1,5 +1,6 @@
 "use client"
 import "./Header.css";
+import { Link } from "react-scroll";
 import React, { useState, useEffect } from "react";
 
 export default function FloatingHeader() {
@@ -38,7 +39,9 @@ export default function FloatingHeader() {
                     </div>
                 </div>
                 <div className="flex-end text-strike cursor-pointer font-orbitron font-light z-51" >
-                    <a>work</a>&nbsp;&nbsp;&nbsp;<a>about</a>&nbsp;&nbsp;&nbsp;<a>contact</a>
+                    <a><Link to="projects" smooth={true} offset={-80} duration={2000}>work</Link>
+                    </a>&nbsp;&nbsp;&nbsp;<a><Link to="about" smooth={true}>about</Link>
+                    </a>&nbsp;&nbsp;&nbsp;<a href="mailto:matthew.a.betsill@gmail.com">contact</a>
                 </div>
             </div>
             <div className="bg-image"></div>

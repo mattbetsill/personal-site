@@ -7,7 +7,7 @@ export default function ScrollBackground() {
     const changeBackground = () => {
         let scroll = window.scrollY;
 
-        if (scroll <= 800) {
+        if (scroll < 800) {
             setOpacity((scroll % 800 * 0.00125));
         } else if (scroll >= PAGE_HEIGHT - 2000 && scroll < PAGE_HEIGHT - 1200) {
             setOpacity(1 - ((scroll - (PAGE_HEIGHT - 2000)) % 800 * 0.00125));

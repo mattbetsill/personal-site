@@ -73,16 +73,16 @@ export default function PanthropiaDescription() {
     ];
 
     return (
-        <div className="text-white p-6">
-            <div className="grid grid-cols-1 gap-48">
+        <div className="text-white p-6 mb-40">
+            <div className="grid grid-cols-1 gap-48" id="projects">
                 {projects.map((project, index) => (
-                    <div key={project.id} className={`flex ${index % 2 === 0 ? 'flex-col' : 'flex-col-reverse'} md:justify-between md:flex-row md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} space-y-4 md:space-y-0 md:space-x-4`}>
+                    <div key={project.id} className={`flex flex-col md:justify-between md:flex-row md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} space-y-4 md:space-y-0 md:space-x-4`}>
                         <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-1/2">
                             <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover hover:opacity-80 transition-opacity duration-300" />
                         </a>
                         <div className={`pt-4 p-4 md:pt-0 md:pl-4`}>
-                            <h2 className="text-xl font-bold">{project.title}</h2>
-                            <p className="my-4">{project.description}</p>
+                            <h2 className="text-3xl font-cinzel font-bold">{project.title}</h2>
+                            <p className="my-4 font-orbitron">{project.description}</p>
                             <div className="flex flex-row">
                                 {(project.frontendUrl || project.backendUrl) &&
                                     <img src="icons8-github.svg" alt="github" className="w-6 h-6 m-2"></img>
