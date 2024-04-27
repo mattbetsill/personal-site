@@ -23,7 +23,7 @@ module.exports = {
         '1/2-screen': '50vh',
       },
       screens: {
-        'sm': '640px',
+        'sm': '100px',
         'md': '768px',
         'lg': '1024px',
         'xl': '1280px',

@@ -14,12 +14,13 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-8 pt-0 h-[${PAGE_HEIGHT}px]`}>
+    <main className={`flex flex-col items-center justify-between p-8 pt-0`} style={{height: PAGE_HEIGHT+"px"}}>
       <BackgroundImage></BackgroundImage>
       <ScrollBackground></ScrollBackground>
       <BackgroundOverlayShape isVisible={isOpen} ></BackgroundOverlayShape>
       <FloatingHeader></FloatingHeader>
       <Body setIsOpen={setIsOpen}></Body>
+      <div className="flex-grow z-20"></div>
       <BackgroundCredit></BackgroundCredit>
       <Footer />
 
