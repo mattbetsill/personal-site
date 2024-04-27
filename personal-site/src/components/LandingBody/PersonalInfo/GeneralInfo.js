@@ -8,8 +8,8 @@ export default function GeneralInfo({ setIsOpen }) {
     return (
         <div className="flex flex-col md:flex-row w-full md:items-end  pb-20 mt-12 min-h-screen justify-between">
             <div className="flex flex-col mt-16 justify-between h-full px-4 md:px-0">
-                    <h1 className="text-white text-3xl md:text-5xl font-bold uppercase">Software</h1>
-                    <h1 className="pb-8 text-white text-3xl md:text-5xl font-bold uppercase">Developer</h1>
+                    <h1 className="text-white text-4xl md:text-7xl font-cinzel font-bold uppercase">Software</h1>
+                    <h1 className="pb-8 text-white text-4xl md:text-7xl font-cinzel font-bold uppercase">Developer</h1>
             </div>
             <div className="pl-4 md:pl-8 flex w-full flex-col justify-between h-full">
                 <div className="hover:cursor-pointer text-right text-white z-20" onMouseEnter={() => setIsOpen(true)}

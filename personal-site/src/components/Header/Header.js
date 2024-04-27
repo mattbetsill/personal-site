@@ -29,16 +29,16 @@ export default function FloatingHeader() {
             <div className="px-6 py-3 flex justify-between">
                 <div className="flex">
                     <div className="flex items-center">
-                        <h1 className="text-lg text-white font-dm-serif leading-none">Matt Betsill</h1>
+                        <h1 className="text-lg text-white font-orbitron font-bold leading-none">Matt Betsill</h1>
                     </div>
                     <div style={{ width: '20px' }}></div>
 
                     <div className="flex items-center">
-                        <h2 className="text-sm text-white font-michroma leading-none ml-1">SOFTWARE DEVELOPER</h2>
+                        <h2 className="text-sm text-white font-orbitron font-light leading-none ml-1">SOFTWARE DEVELOPER</h2>
                     </div>
                 </div>
-                <div className="flex-end text-strike cursor-pointer font-michroma z-51" >
-                    <a>work,</a>&nbsp;<a>about,</a>&nbsp;<a>contact</a>
+                <div className="flex-end text-strike cursor-pointer font-orbitron font-light z-51" >
+                    <a>work</a>&nbsp;&nbsp;&nbsp;<a>about</a>&nbsp;&nbsp;&nbsp;<a>contact</a>
                 </div>
             </div>
             <div className="bg-image"></div>

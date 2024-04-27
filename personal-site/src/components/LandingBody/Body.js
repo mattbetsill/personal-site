@@ -9,7 +9,7 @@ export default function Body({ setIsOpen }) {
     return (
         <div className="z-20 flex-col w-full h-full">
             <GeneralInfo className="width-full" setIsOpen={setIsOpen}></GeneralInfo>
-            <div className="h-1/2-screen"></div>
+
             <About></About>
             <ProjectBody></ProjectBody>
             <Contact></Contact>

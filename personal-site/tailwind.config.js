@@ -15,12 +15,14 @@ module.exports = {
       },
       fontFamily: {
         'dm-serif': ["DM Serif Display", "serif"],
-        'michroma': ["Michroma", "sans-serif"],
         'sofia-sans': ["Sofia Sans Extra Condensed", "sans-serif"],
         'orbitron': ["Orbitron", "sans-serif"],
+        'cinzel': ["Cinzel", "serif"]
       },
       height: {
+        '1/4-screen': '25vh',
         '1/2-screen': '50vh',
+        '1/2-screen-w': '50vw'
       },
       screens: {
         'sm': '100px',

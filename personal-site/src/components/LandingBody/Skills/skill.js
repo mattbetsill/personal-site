@@ -6,7 +6,7 @@ export default function Skill({ text }) {
 
         <button className="btn-two relative font-2xl overflow-hidden max-w-full bg-gray-800 text-white py-2 px-4">
 
-            <p className="overflow-hidden whitespace-nowrap text-ellipsis">
+            <p className="overflow-hidden font-orbitron whitespace-nowrap text-ellipsis">
                 {text}
             </p>
 
