@@ -19,7 +19,7 @@ export default function Home() {
       <ScrollBackground></ScrollBackground>
       <BackgroundOverlayShape isVisible={isOpen} ></BackgroundOverlayShape>
       <FloatingHeader></FloatingHeader>
-      <Body setIsOpen={setIsOpen}></Body>
+      <Body setIsOpen={setIsOpen} isOpen={isOpen}></Body>
       <div className="flex-grow z-20"></div>
       <BackgroundCredit></BackgroundCredit>
       <Footer />

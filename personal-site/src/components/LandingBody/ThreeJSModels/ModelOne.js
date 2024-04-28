@@ -19,18 +19,16 @@ function Model() {
 
 export default function ModelOne() {
 
-        return (
-            <Canvas style={{ height: "100vh", width: "50vw" }}>
-            <ambientLight intensity={0.3} />
-            <spotLight position={[10, 10, 10]} angle={0.3} penumbra={1} intensity={2} />
-            <directionalLight position={[-8, 20, 8]} intensity={1} />
-            <group position={[0, -2, 0]}> {/* Set the position of the model */}
-                <Model />
-            </group>
-            {/* <OrbitControls /> */}
-            {/* <Environment preset="sunset" background /> */}
-            </Canvas>
-        );
+  return (
+    <Canvas style={{ height: "100vh", width: "50vw" }}>
+      <ambientLight intensity={0.3} />
+      <spotLight position={[10, 10, 10]} angle={0.3} penumbra={1} intensity={2} />
+      <directionalLight position={[-8, 20, 8]} intensity={1} />
+      <group position={[0, -2, 0]}>
+        <Model />
+      </group>
+    </Canvas>
+  );
 }
 
 

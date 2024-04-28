@@ -10,8 +10,8 @@ export default function About() {
             </div>
             <div className="text-white flex md:flex-row flex-col justify-between">
                 <div></div>
-                <div className="z-20 my-20 font-orbitron">I am a developer based in the United States.
-                    I attended Virginia Tech and earned a Backelors Degree in Computer Science.
+                <div className="z-20 my-20 font-orbitron text-2xl">I am a developer based in the United States.
+                    I attended Virginia Tech and earned a Bachelors Degree in Computer Science.
                     I apply what I have learned in school, combining it with a passion for continuous learning
                     to create inspired projects. </div>
                 <div className="h-2/3 my-4">
