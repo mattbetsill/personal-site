@@ -39,9 +39,11 @@ export default function FloatingHeader() {
                     </div>
                 </div>
                 <div className="flex-end text-strike cursor-pointer font-orbitron font-light z-51" >
-                    <span><Link to="projects" as="" smooth={true} offset={-80} duration={2000}>work</Link>
-                    </span>&nbsp;&nbsp;&nbsp;<span><Link to="about" as="" smooth={true}>about</Link>
-                    </span>&nbsp;&nbsp;&nbsp;<a href="mailto:matthew.a.betsill@gmail.com">contact</a>
+                    <div className="flex md:flex-row sm:flex-col gap-0">
+                        <Link className="mx-1" to="projects" smooth={true} offset={-80} duration={2000}>work</Link>
+                        <Link className="mx-1"  to="about" smooth={true}>about</Link>
+                        <a className="mx-1" href="mailto:matthew.a.betsill@gmail.com">contact</a>
+                    </div>
                 </div>
             </div>
             <div className="bg-image"></div>
