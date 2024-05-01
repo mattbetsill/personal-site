@@ -14,7 +14,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <main className={`flex flex-col items-center justify-between p-8 pt-0`} style={{height: PAGE_HEIGHT+"px"}}>
+    <main className={`flex flex-col items-center justify-between p-8 pt-0 bg-black`} style={{height: PAGE_HEIGHT+"px"}}>
       <BackgroundImage></BackgroundImage>
       <ScrollBackground></ScrollBackground>
       <BackgroundOverlayShape isVisible={isOpen} ></BackgroundOverlayShape>

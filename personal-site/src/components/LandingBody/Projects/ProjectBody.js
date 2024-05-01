@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PanthropiaDescription from "./Descriptions/PanthropiaDescription";
 
 export default function ProjectBody() {
