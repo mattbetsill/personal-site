@@ -16,9 +16,9 @@ export default function BackgroundCredit() {
         return () => window.removeEventListener("scroll", changeBackground);
     }, []);
     return (
-        <div className={`transition-opacity duration-500 fixed mb-10 bottom-20 right-10 text-white z-20 w-40 h-10 backdrop-blur-sm ${scroll > PAGE_HEIGHT - 950 ? "opacity-100 visible" : "opacity-0 hidden"}`}>
-            {/* <span className="font-cinzel">The Fall of Babylon,<br />John Martin
-            </span> */}
+        <div className={`transition-opacity duration-2000 fixed mb-10 bottom-20 right-10 text-white z-10 w-40 h-10 backdrop-blur-sm ${scroll > PAGE_HEIGHT - 950 ? "opacity-100" : "opacity-0"}`}>
+            <span className="font-cinzel">Background inspired by<br />John Martin
+            </span>
         </div>
     )
 }
