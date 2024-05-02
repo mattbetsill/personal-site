@@ -11,7 +11,6 @@ export default function ProjectBody() {
     const { sharedState, setSharedState } = useSharedState();
     useEffect(() => {
         const checkScroll = () => {
-            console.log(sharedState);
 
             if (window.scrollY >= sharedState && window.scrollY <= sharedState + 800) {
                 if (window.scrollY >= sharedState && window.scrollY < sharedState + 200) {

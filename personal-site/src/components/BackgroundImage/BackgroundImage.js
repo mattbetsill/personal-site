@@ -9,7 +9,6 @@ export default function BackgroundImage() {
 
     const handleImageLoad = (event) => {
         changeImageHeight(event.target.offsetHeight);
-        console.log("Here")
     }
 
 

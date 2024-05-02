@@ -15,12 +15,8 @@ export default function About() {
                 const rect = aboutRef.current.getBoundingClientRect(); // Get rect object
                 const bottomPosition = rect.top + window.scrollY + rect.height - window.innerHeight/2; // Calculate absolute bottom position
                 setSharedState(bottomPosition); // Update state with the bottom position
-                console.log(sharedState)
             }
-            // console.log(aboutEnd);
 
-
-            // rest of the code
         };
 
         window.addEventListener('scroll', checkScroll);
