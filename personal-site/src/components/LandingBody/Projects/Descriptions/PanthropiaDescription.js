@@ -1,24 +1,35 @@
+
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import PanthropiaFrame from "../SiteFrames/PanthropiaFrame";
-
+import OverlayInfo from "./OverlayInfo";
 export default function PanthropiaDescription() {
 
-    const [scroll, setScroll] = useState(0);
-    useEffect(() => {
-        const checkScroll = () => {
-            setScroll(window.scrollY);
+    const [activeProject, setActiveProject] = useState(null);
+
+    // const [scroll, setScroll] = useState(0);
+    // useEffect(() => {
+    //     const checkScroll = () => {
+    //         setScroll(window.scrollY);
+
+    const handleProjectClick = (project) => {
+        if (activeProject === null) {
+            setActiveProject(project.id);
+
+        } else {
+            setActiveProject(null);
+        }
+    };
 
 
 
-        };
+    //     };
 
-        window.addEventListener('scroll', checkScroll);
-
-        // Cleanup function to remove the event listener
-        return () => window.removeEventListener('scroll', checkScroll);
-    }, []);
+    //     window.addEventListener('scroll', checkScroll);
+    //     // Cleanup function to remove the event listener
+    //     return () => window.removeEventListener('scroll', checkScroll);
+    // }, []);
 
 
     const projects = [
@@ -73,14 +84,26 @@ export default function PanthropiaDescription() {
     ];
 
     return (
+        // <div className="text-white p-6 mb-40">
+        //     <div className="grid grid-cols-1 gap-48" id="projects">
+        //         {projects.map((project, index) => (
+        //             <div key={project.id} className={`flex flex-col md:justify-between md:flex-row md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} space-y-4 md:space-y-0 md:space-x-4`}>
+        //                 <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-1/2">
+        //                     <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover hover:opacity-80 transition-opacity duration-300" />
+        //                 </a>
+        //                 <div className={`pt-4 p-4 md:pt-0 md:pl-4`}>
+        //                     <h2 className="text-3xl font-cinzel font-bold">{project.title}</h2>
+        //                     <p className="my-4 font-orbitron">{project.description}</p>
         <div className="text-white p-6 mb-40">
-            <div className="grid grid-cols-1 gap-48" id="projects">
+            <div className="grid grid-cols-1 gap-24 relative" id="projects">
                 {projects.map((project, index) => (
-                    <div key={project.id} className={`flex flex-col md:justify-between md:flex-row md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} space-y-4 md:space-y-0 md:space-x-4`}>
-                        <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-1/2">
+                    <div key={project.id} className={`flex flex-col md:justify-between md:flex-row md:items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} space-y-4 md:space-y-0 md:space-x-4 transition-all duration-300 ease-in-out ${activeProject === project.id ? 'transform -translate-x-20' : 'transform translate-x-0'}`} onClick={() => handleProjectClick(project)}>
+                        <div className="w-full md:w-1/2">
+                            {/* <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer" className="w-full md:w-1/2"> */}
                             <img src={project.imageUrl} alt={project.title} className="w-full h-auto object-cover hover:opacity-80 transition-opacity duration-300" />
-                        </a>
-                        <div className={`pt-4 p-4 md:pt-0 md:pl-4`}>
+                            {/* </a> */}
+                        </div>
+                        <div className={`pt-4 p-4 md:pt-0 md:pl-4 transition-opacity duration-300 ${activeProject === project.id ? 'opacity-0' : 'opacity-100'}`}>
                             <h2 className="text-3xl font-cinzel font-bold">{project.title}</h2>
                             <p className="my-4 font-orbitron">{project.description}</p>
                             <div className="flex flex-row">
@@ -102,9 +125,13 @@ export default function PanthropiaDescription() {
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            {/* <OverlayInfo project={project} isActive={activeProject === project.id} setActiveProject={setActiveProject}></OverlayInfo> */}
+                        </div>
                     </div>
                 ))}
             </div>
+
         </div>
         //     <div className="bg-black text-white p-6">
         //     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
