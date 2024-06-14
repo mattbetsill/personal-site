@@ -1,1 +1,1 @@
-export const PAGE_HEIGHT = 7000;
+export const PAGE_HEIGHT = 8000;
