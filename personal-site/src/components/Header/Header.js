@@ -35,7 +35,7 @@ export default function FloatingHeader() {
                     <div style={{ width: '20px' }}></div>
 
                     <div className="flex items-center">
-                        <h2 className="text-sm text-white font-orbitron font-light leading-none ml-1">SOFTWARE DEVELOPER</h2>
+                        <h2 className="text-sm text-white font-orbitron font-light leading-none ml-1">SOFTWARE DEVELOPER - DEVOPS ENGINEER</h2>
                     </div>
                 </div>
                 <div className="flex-end text-strike cursor-pointer font-orbitron font-light z-51" >

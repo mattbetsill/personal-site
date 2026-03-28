@@ -26,6 +26,7 @@ export default function PanthropiaDescription() {
             id: 1,
             title: 'Panthropia',
             description: 'The Acropolis of Collegiate Events',
+            subdescription: 'Backend offline, contact for demo :)',
             imageUrl: '/images/panthropia_screen.png',
             websiteUrl: 'https://panthropia.com',
             frontendUrl: 'https://github.com/mattbetsill/panthropia-frontend-public',
@@ -53,6 +54,7 @@ export default function PanthropiaDescription() {
             id: 4,
             title: 'SiteSea',
             description: 'A Platform for Website Comments',
+            subdescription: 'Backend offline',
             imageUrl: '/images/sitesea_screen.png',
             websiteUrl: 'https://site-sea-front-end.vercel.app/',
             frontendUrl: null,
@@ -83,6 +85,7 @@ export default function PanthropiaDescription() {
                         <div className={`pt-4 p-4 md:pt-0 md:pl-4`}>
                             <h2 className="text-3xl font-cinzel font-bold">{project.title}</h2>
                             <p className="my-4 font-orbitron">{project.description}</p>
+                            <p className="my-2 font-thin">{project.subdescription}</p>
                             <div className="flex flex-row">
                                 {(project.frontendUrl || project.backendUrl) &&
                                     <img src="icons8-github.svg" alt="github" className="w-6 h-6 m-2"></img>
