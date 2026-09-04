@@ -42,6 +42,7 @@ button:hover {
     color: #FFF;
     transition: all 0.5s;
     position: relative;
+    overflow: hidden;
 }
 
 .btn-two span:hover {
