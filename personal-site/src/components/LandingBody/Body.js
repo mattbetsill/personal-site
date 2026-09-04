@@ -10,7 +10,7 @@ import { StateProvider } from "@/context/sharedstate";
 export default function Body({ setIsOpen, isOpen }) {
 
     return (
-        <div className="z-20 flex-col w-full h-full">
+        <div className="z-20 flex-col w-full">
             <GeneralInfo className="width-full" setIsOpen={setIsOpen} isOpen={isOpen}></GeneralInfo>
             <StateProvider>
                 <About></About>
