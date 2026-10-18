@@ -1,0 +1,27 @@
+services:
+  site:
+    build: .
+    image: personal-site
+    restart: unless-stopped
+    # No "ports:" on purpose: the site is only reachable by cloudflared on the internal network
+    networks: [tunnel]
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+
+  cloudflared:
+    image: cloudflare/cloudflared:2026.10.1
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    depends_on: [site]
+    networks: [tunnel]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+
+networks:
+  tunnel:

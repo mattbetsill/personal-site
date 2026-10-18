@@ -1,13 +1,18 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Generalinfo.css";
 
 
 function Available({ setIsOpen }) {
-    const date = new Date();
-    date.setDate(date.getDate() + 2);
-    const day = date.getDate();
-    const month = date.toLocaleString('default', { month: 'short' });
+    // Computed after mount so the statically built HTML doesn't freeze the build date
+    const [day, setDay] = useState("");
+    const [month, setMonth] = useState("");
+    useEffect(() => {
+        const date = new Date();
+        date.setDate(date.getDate() + 2);
+        setDay(date.getDate());
+        setMonth(date.toLocaleString('default', { month: 'short' }));
+    }, []);
     return (
         <div className="flex flex-row md:justify-center sm:justify-end">
             <div className="flex justify-start z-20">
