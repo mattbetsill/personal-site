@@ -3,7 +3,8 @@ services:
     build: .
     image: personal-site
     restart: unless-stopped
-    # No "ports:" on purpose: the site is only reachable by cloudflared on the internal network
+    # No "ports:" on purpose: the site is only reachable by cloudflared on the internal network,
+    # and being only on that network means it has no internet access either
     networks: [tunnel]
     read_only: true
     tmpfs:
@@ -18,10 +19,13 @@ services:
     environment:
       - TUNNEL_TOKEN=${TUNNEL_TOKEN}
     depends_on: [site]
-    networks: [tunnel]
+    # tunnel to reach the site, egress to reach Cloudflare
+    networks: [tunnel, egress]
     read_only: true
     cap_drop: [ALL]
     security_opt: ["no-new-privileges:true"]
 
 networks:
   tunnel:
+    internal: true
+  egress:
